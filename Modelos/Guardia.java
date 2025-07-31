@@ -1,9 +1,9 @@
 public class Guardia {
-    private String nombre;
+    private String nombre1;
     private int ubicacion;
 
     public Guardia(String nombre, String ubicacion) {
-        this.nombre = nombre;
+        this.nombre1 = nombre;
         this.ubicacion = Integer.parseInt(ubicacion);
     }
 

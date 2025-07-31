@@ -1,9 +1,10 @@
 import java.util.Scanner;
+import javax.sound.midi.ControllerEventListener;
 
 public class MainGuardia {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        Guardia g = null;
+        CementerioControl controler = new CementerioControl();
 
         while (true) {
             System.out.println("\n--- MENÚ GUARDIA ---");
@@ -17,11 +18,10 @@ public class MainGuardia {
 
             if (op == 1) {
                 System.out.print("Nombre: ");
-                String nombre = sc.nextLine();
+                String nombre1 = sc.nextLine();
                 System.out.print("Ubicación (número): ");
                 String ubicacion = sc.nextLine();
-                g = new Guardia(nombre, ubicacion);
-                System.out.println("Guardia creado.");
+                controler.crearGuardia(nombre1,ubicacion);
             }
 
             if (op == 2) {

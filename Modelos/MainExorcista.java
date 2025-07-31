@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class MainExorcista {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        Exorcista e = null;
+        CementerioControl controler = new CementerioControl();
 
         while (true) {
             System.out.println("\n--- MENÚ EXORCISTA ---");
@@ -21,24 +21,16 @@ public class MainExorcista {
                 System.out.print("Cantidad de exorcismos: ");
                 int ex = sc.nextInt();
                 sc.nextLine();
-                e = new Exorcista(nombre, ex);
-                System.out.println("Exorcista creado.");
+
+                controler.crearexorcista(nombre, ex);
             }
 
             if (op == 2) {
-                if (e != null) {
-                    e.Exorcisar();
-                } else {
-                    System.out.println("Primero crea un exorcista.");
-                }
+                controler.realizarExorcismo();
             }
 
             if (op == 3) {
-                if (e != null) {
-                    e.Bendecir();
-                } else {
-                    System.out.println("Primero crea un exorcista.");
-                }
+                controler.realizarBendicion();
             }
 
             if (op == 4) {

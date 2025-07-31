@@ -7,13 +7,13 @@ public class Exorcista {
         this.exorcismos = exorcismos;
     }
 
-    public void Exorcisar() {
-        System.out.println(nombre + " ha realizado un exorcismo.");
+    public String exorcisar() {
         exorcismos++;
+        return nombre + " ha realizado un exorcismo.";
     }
 
-    public void Bendecir() {
-        System.out.println(nombre + " ha bendecido un lugar.");
+    public String bendecir() {
+        return nombre + " ha bendecido un lugar.";
     }
 
 }
