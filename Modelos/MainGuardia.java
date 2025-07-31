@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import javax.sound.midi.ControllerEventListener;
 
 public class MainGuardia {
     public static void main(String[] args) {
@@ -25,19 +24,11 @@ public class MainGuardia {
             }
 
             if (op == 2) {
-                if (g != null) {
-                    System.out.println(g.buscarUbicacion());
-                } else {
-                    System.out.println("Primero crea un guardia.");
-                }
+                controler.buscarUbic();
             }
 
             if (op == 3) {
-                if (g != null) {
-                    System.out.println(g.Vigila() ? "Sí vigila." : "No vigila.");
-                } else {
-                    System.out.println("Primero crea un guardia.");
-                }
+                controler.vigilar();
             }
 
             if (op == 4) {

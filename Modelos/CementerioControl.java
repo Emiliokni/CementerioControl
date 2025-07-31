@@ -27,4 +27,18 @@ Guardia g = null;
     g = new Guardia(nombre1, ubicacion);
     return "Guardia Creado";
     }
+
+    public String buscarUbic() {
+    if (g != null){
+        return g.buscarUbicacion();
+    }
+    return "Debes crear un guardia";
+    }
+    
+    public boolean vigilar(){
+    if (g != null) {
+        return g.Vigila();
+    }
+    return false;
+    }
 }
