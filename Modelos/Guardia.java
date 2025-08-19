@@ -1,17 +1,21 @@
 public class Guardia {
-    private String nombre1;
-    private int ubicacion;
+    private String nombre;
+    private String ubicacion;
+    private boolean vigilando;
 
-    public Guardia(String nombre, String ubicacion) {
-        this.nombre1 = nombre;
-        this.ubicacion = Integer.parseInt(ubicacion);
+    public Guardia(String nombre, String ubicacion, boolean vigilando) {
+        this.nombre = nombre;
+        this.ubicacion = ubicacion;
+        this.vigilando = vigilando;
     }
 
-    public String buscarUbicacion() {
-        return "Ubicación actual: " + ubicacion;
+    public String verUbic() {
+        return "El guardia " + nombre + " está en: " + ubicacion;
     }
 
-    public boolean Vigila() {
-        return true;
+    // Puedes alternar estado o solo reportarlo; aquí alterno a modo demo
+    public String vigilar() {
+        vigilando = !vigilando;
+        return "El guardia " + nombre + (vigilando ? " está vigilando." : " dejó de vigilar.");
     }
 }
